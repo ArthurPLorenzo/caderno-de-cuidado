@@ -22,6 +22,8 @@ Feche o Safari e abra o app **sempre pelo ícone novo**.
 
 O que você guarda pelo Safari não aparece no app do ícone. Por isso, use sempre o ícone.
 
+**Atenção: não apague o ícone.** Se você tirar o ícone da Tela de Início, tudo o que está guardado no app é apagado junto. Só dá para recuperar com um backup (veja o passo 5).
+
 ## 4. Colocar o arquivo que você recebeu
 
 Se alguém mandou um arquivo pelo WhatsApp (termina em `.json` ou `.zip`):
@@ -35,7 +37,7 @@ Se alguém mandou um arquivo pelo WhatsApp (termina em `.json` ou `.zip`):
 
 ## 5. Fazer backup de vez em quando
 
-Tudo fica guardado só no seu iPhone. Se o iPhone quebrar ou for trocado, o backup é o que salva os seus registros.
+Tudo fica guardado só no seu iPhone. Se o iPhone quebrar ou for trocado, ou se o ícone for apagado, o backup é o que salva os seus registros.
 
 1. Toque na engrenagem ⚙️, no alto da tela.
 2. Toque em **Exportar backup**.
