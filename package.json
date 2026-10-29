@@ -1,0 +1,13 @@
+{
+  "name": "caderno-de-cuidado",
+  "private": true,
+  "version": "1.0.0",
+  "description": "PWA para organizar registros, remédios, documentos e consultas. Os dados ficam só no aparelho.",
+  "scripts": {
+    "start": "node tests/servidor.mjs",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}

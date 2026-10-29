@@ -1,0 +1,15 @@
+# Dados reais nunca entram no repositório
+*.json
+!exemplos/*.json
+!package.json
+!package-lock.json
+*.zip
+dados/
+
+# Protótipo de referência (fica só na máquina)
+referencia/
+
+# Ferramentas
+node_modules/
+test-results/
+playwright-report/
