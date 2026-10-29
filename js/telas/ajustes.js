@@ -50,6 +50,7 @@ function painelPessoa() {
         h("button", { class: "linkbtn perigo", type: "button", onclick: () => { r.sobre.splice(i, 1); redesenhar(); } }, "Tirar este item")))),
       h("button", { class: "btn ghost small", type: "button", onclick: () => { r.sobre.push({ rotulo: "", texto: "" }); redesenhar(); } }, "Acrescentar item")),
     h("fieldset", { class: "field" }, h("legend", {}, "Equipe"),
+      h("p", { class: "small" }, "Só uma lista de contatos, que aparece no Início. Ninguém recebe acesso ao app."),
       h("ul", { class: "lista-edit" }, r.equipe.map((e, i) => h("li", {},
         campo("aj-eq-esp-" + i, "Especialidade", e, "especialidade"),
         h("div", { class: "row" }, campo("aj-eq-nome-" + i, "Nome", e, "nome"), campo("aj-eq-cont-" + i, "Contato", e, "contato")),

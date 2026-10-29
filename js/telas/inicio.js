@@ -18,7 +18,26 @@ export function render(box) {
       h("button", { class: "btn grande", type: "button", onclick: () => ir("diario") }, "Registrar no diário"),
       h("button", { class: "btn ghost grande", type: "button", onclick: () => ir("pasta") }, "Guardar arquivo")),
     proxima(),
-    estado.alertas.map(alerta)));
+    estado.alertas.map(alerta),
+    equipe()));
+}
+
+/* Contato vira link de ligar quando parece telefone. */
+function contato(t) {
+  const digitos = t.replace(/\D/g, "");
+  if (/^[\d\s()+.-]+$/.test(t) && digitos.length >= 8) return h("a", { href: "tel:" + (t.trim()[0] === "+" ? "+" : "") + digitos, class: "linkbtn" }, t);
+  return h("span", {}, t);
+}
+function equipe() {
+  const lista = (estado.pessoa.equipe || []).filter((e) => e.especialidade || e.nome || e.contato);
+  if (!lista.length) return null;
+  return h("section", { class: "panel" },
+    h("p", { class: "eyebrow" }, "Contatos"),
+    h("h2", {}, "Equipe"),
+    h("ul", { class: "equipe" }, lista.map((e) => h("li", {},
+      h("b", {}, e.especialidade || "Profissional"),
+      e.nome ? h("span", {}, e.nome) : null,
+      e.contato ? contato(e.contato) : null))));
 }
 
 function boasVindas() {

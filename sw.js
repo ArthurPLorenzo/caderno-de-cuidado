@@ -1,6 +1,6 @@
 // Service worker: guarda todos os arquivos do app para funcionar sem internet.
 // Ao publicar mudanças, aumente VERSAO: o app mostra "Nova versão disponível · Atualizar".
-const VERSAO = "v1";
+const VERSAO = "v2";
 const CACHE = "caderno-" + VERSAO;
 
 const ARQUIVOS = [

@@ -20,6 +20,9 @@ test("fluxo completo: importar, consulta, pasta, diário, remédio, backup e res
   // importar o exemplo
   await importarExemplo(page);
   await expect(page.getByText("Febre alta")).toBeVisible();
+  const equipe = page.locator(".equipe");
+  await expect(equipe).toContainText("Dra. Helena Fictícia");
+  await expect(equipe.getByRole("link", { name: "(00) 0000-0000" })).toHaveAttribute("href", "tel:0000000000");
 
   // criar consulta
   await aba(page, "Consultas");
