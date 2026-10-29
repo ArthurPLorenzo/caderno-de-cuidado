@@ -1,0 +1,89 @@
+{
+  "formato": "caderno-de-cuidado",
+  "versao": 1,
+  "conteudo": "perfil",
+  "geradoEm": "2026-10-20T10:00:00-03:00",
+  "pessoa": {
+    "nome": "Tomás Exemplo",
+    "sobre": [
+      { "rotulo": "Quem é", "texto": "Pessoa fictícia, criada só para mostrar como o app funciona. 12 anos." },
+      { "rotulo": "Acompanhamento", "texto": "Consultas regulares com a equipe abaixo. Usa os remédios da aba Remédios." },
+      { "rotulo": "O que ajuda", "texto": "Rotina previsível, avisar antes de mudanças, lugar calmo para se acalmar." }
+    ],
+    "equipe": [
+      { "especialidade": "Psiquiatria", "nome": "Dra. Helena Fictícia", "contato": "(00) 0000-0000" },
+      { "especialidade": "Neurologia", "nome": "Dr. Caio Inventado", "contato": "" },
+      { "especialidade": "Endocrinologia", "nome": "Dra. Lia Modelo", "contato": "" },
+      { "especialidade": "Acompanhante terapêutico", "nome": "Rafa Exemplo", "contato": "" }
+    ]
+  },
+  "alertas": [
+    {
+      "id": "a1",
+      "titulo": "Febre alta",
+      "texto": "Febre acima de 38,5 °C que não baixa com o remédio de costume.",
+      "agir": "Dar bastante água, medir de novo em 1 hora e avisar a equipe.",
+      "emergencia": "Se tiver falta de ar, manchas na pele ou ficar muito sonolento: pronto-socorro."
+    },
+    {
+      "id": "a2",
+      "titulo": "Esqueceu uma dose",
+      "texto": "Não dobrar a dose seguinte.",
+      "agir": "Anotar no diário e seguir o horário normal.",
+      "emergencia": ""
+    }
+  ],
+  "categorias": [
+    {
+      "id": "agitacao",
+      "rotulo": "Agitação",
+      "cor": "roxo",
+      "campos": [
+        { "id": "duracao", "rotulo": "Quanto tempo durou", "tipo": "texto", "dica": "ex.: uns 10 minutos" },
+        { "id": "antes", "rotulo": "O que aconteceu antes", "tipo": "texto_longo", "dica": "ex.: mudança de planos, barulho, cansaço" },
+        { "id": "sinais", "rotulo": "O que aconteceu", "tipo": "varias", "opcoes": ["Gritou", "Chorou", "Jogou objetos", "Se machucou", "Saiu correndo"] },
+        { "id": "acalmou", "rotulo": "Já se acalmou?", "tipo": "uma", "opcoes": ["Sim", "Ainda não"] }
+      ],
+      "avisos": [
+        { "quando": { "sinais": "Se machucou" }, "texto": "Se houver ferimento, lave com água e sabão. Se sangrar muito ou for na cabeça, procure atendimento." },
+        { "quando": { "acalmou": "Ainda não" }, "texto": "Leve para um lugar calmo e fique por perto. Se passar de 30 minutos, ligue para a equipe." }
+      ]
+    },
+    {
+      "id": "sono",
+      "rotulo": "Sono",
+      "cor": "azul",
+      "campos": [
+        { "id": "horas", "rotulo": "Quantas horas dormiu", "tipo": "texto", "dica": "ex.: 7 horas" },
+        { "id": "acordou", "rotulo": "Acordou durante a noite?", "tipo": "uma", "opcoes": ["Não", "Uma vez", "Várias vezes"] }
+      ],
+      "avisos": []
+    }
+  ],
+  "remedios": [
+    { "id": "r1", "nome": "Atentol", "principio": "nome fictício", "dose": "10 mg", "posologia": "1 comprimido de manhã", "grupo": "Atenção", "para": "Ajudar a manter a atenção na escola", "observar": "Apetite no almoço e sono", "atualizadoEm": "2026-09-15" },
+    { "id": "r2", "nome": "Sonorina", "principio": "nome fictício", "dose": "2 mg", "posologia": "1 comprimido às 21h", "grupo": "Sono", "para": "Ajudar a dormir", "observar": "Sonolência de manhã", "atualizadoEm": "2026-08-02" },
+    { "id": "r3", "nome": "Vitamina D", "principio": "", "dose": "1.000 UI", "posologia": "1 gota por dia", "grupo": "Suplementos", "para": "Reposição", "observar": "", "atualizadoEm": "2026-06-10" }
+  ],
+  "diario": [
+    { "id": "ex-d1", "categoria": "agitacao", "quando": "2026-10-12T17:30", "texto": "Ficou agitado depois que o passeio foi cancelado.", "campos": { "duracao": "uns 15 minutos", "antes": "Passeio cancelado por causa da chuva.", "sinais": ["Gritou", "Chorou"], "acalmou": "Sim" }, "quem": "Mãe" },
+    { "id": "ex-d2", "categoria": "sono", "quando": "2026-10-14T07:00", "texto": "", "campos": { "horas": "6 horas", "acordou": "Várias vezes" }, "quem": "Mãe" },
+    { "id": "ex-d3", "categoria": "alimentacao", "quando": "2026-10-16T12:30", "texto": "Comeu pouco no almoço, só arroz.", "campos": {}, "quem": "Pai" },
+    { "id": "ex-d4", "categoria": "comportamento", "quando": "2026-10-18T10:00", "horaDesconhecida": true, "texto": "Na escola disseram que participou bem da aula de música.", "campos": {}, "quem": "Acompanhante terapêutico" }
+  ],
+  "consultas": [
+    {
+      "id": "ex-c1", "especialidade": "Neurologia", "profissional": "Dr. Caio Inventado", "data": "2026-09-20", "hora": "14:00", "local": "Clínica Exemplo",
+      "perguntas": [{ "id": "ex-p1", "texto": "Precisa repetir algum exame este ano?", "origem": "eu", "resposta": "Só se houver mudança nos sintomas.", "respondida": true }],
+      "documentos": [], "anotacoes": "Manter tudo como está. Voltar em dois meses.", "feita": true
+    },
+    {
+      "id": "ex-c2", "especialidade": "Neurologia", "profissional": "Dr. Caio Inventado", "data": "2026-11-15", "hora": "14:00", "local": "Clínica Exemplo",
+      "perguntas": [{ "id": "ex-p2", "texto": "O sono agitado pode ter relação com o remédio da noite?", "origem": "psiquiatra", "resposta": "", "respondida": false }],
+      "documentos": ["ex-doc1"], "anotacoes": "", "feita": false
+    }
+  ],
+  "pasta": [
+    { "id": "ex-doc1", "tipo": "relatorio", "titulo": "Relatório da escola (exemplo)", "data": "2026-10-05", "origem": "Escola", "obs": "Documento de exemplo, sem arquivo anexado.", "arquivos": [] }
+  ]
+}
